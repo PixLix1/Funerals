@@ -44,13 +44,10 @@ class AuthUser(AbstractUser):
 
     objects = AuthUserManager()
 
-    def profile_avatar(self):
-        return self.profile.avatar
-
-    profile_avatar.short_description = 'Profile Avatar'
-
     def __str__(self):
         return self.email
 
     def __repr__(self):
         return self.__str__()
+
+
